@@ -4,7 +4,7 @@ defmodule ImageFinder.Mixfile do
   def project do
     [app: :image_finder,
      version: "0.0.2",
-     elixir: "~> 1.14",
+     elixir: "~> 1.17",
      build_embedded: Mix.env() == :prod,
      start_permanent: Mix.env() == :prod,
      deps: deps()]
@@ -29,13 +29,13 @@ defmodule ImageFinder.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps() do
     [
-      {:tesla, "~> 1.4"},
+      {:tesla, "~> 1.14"},
 
       # optional, but recommended adapter
-      {:hackney, "~> 1.17"},
-  
+      {:hackney, "~> 1.24"},
+
       # optional, required by JSON middleware
-      {:jason, ">= 1.0.0"}
+      {:jason, ">= 1.4.4"}
     ]
   end
 end
